@@ -9,6 +9,7 @@ import Home from './Pages/Home';
 import Signup from './Pages/Signup';
 import { useSelector } from 'react-redux';
 import PrivateRoute from './Components/PrivateRoute';
+import Dashboard from './Pages/Dashboard';
 
 
 const App = ({children}) => {
@@ -21,6 +22,7 @@ const App = ({children}) => {
   
   <Route path='/' element={<Home />}/>
   <Route path='/signup' element={<Signup />} />
+  <Route path='dashboard' element={<Dashboard />} />
   <Route  element={<PrivateRoute />} >  
   <Route path='/productlist' element={<Productlist />} />
   <Route path='/review' element={<Reviews  />} />

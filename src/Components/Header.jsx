@@ -72,8 +72,8 @@ const Header = () => {
             <Dropdown.Header>
               <span className="block text-sm">{currentuser.rest.username}</span>
             </Dropdown.Header>
-            <Link to={"/dashboard?tab=profile"} >
-            <Dropdown.Item>Profile</Dropdown.Item>
+            <Link to={"/dashboard?tab=designs"} >
+            <Dropdown.Item>Dashboard</Dropdown.Item>
             </Link>
             <DropdownDivider />
             <Dropdown.Item  onClick={handleSignout} >Sign Out</Dropdown.Item>
