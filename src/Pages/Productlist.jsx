@@ -24,14 +24,13 @@ const productlist = ({children}) => {
   return (
     < > 
     <Fragment >
-    <div className={theme}>
-<div className='bg-white text-black dark:text-white dark:bg-black min-h-screen'> 
+
     <section id="products" className="container mt-5">
       <div className="row">
       
      {products.map(
        (e,index)=>{
-        return <ProductCard  key={index} name={e.name} description={e.description} price={e.price} image={e.image} rating={e.rating} stock={e.stock} />
+        return <ProductCard  key={index} name={e.name} description={e.description} price={e.price} image={e.image} rating={e.rating} stock={e.stock} _id={e._id} />
 
        }
      )}
@@ -39,8 +38,7 @@ const productlist = ({children}) => {
       </div>
       
     </section>
-    </div>
-    </div>
+   
      </Fragment>
      </>
   );

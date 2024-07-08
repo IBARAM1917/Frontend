@@ -1,41 +1,35 @@
-import React from 'react';
-import './App.css'
-import Reviews from './Components/Reviews';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import Productlist from './Pages/Productlist';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './Pages/Home';
-import Signup from './Pages/Signup';
-import { useSelector } from 'react-redux';
-import PrivateRoute from './Components/PrivateRoute';
-import Dashboard from './Pages/Dashboard';
+import React from "react";
+import "./App.css";
+import Reviews from "./Components/Reviews";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import Productlist from "./Pages/Productlist";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
+import Signup from "./Pages/Signup";
+import PrivateRoute from "./Components/PrivateRoute";
+import Dashboard from "./Pages/Dashboard";
+import ProductDetails from "./Pages/ProductDetails";
 
-
-const App = ({children}) => {
-  const{theme} =useSelector((state)=> state.theme);
+const App = () => {
   return (
-<BrowserRouter>
-<Header />
-<div  className={theme}> 
- <Routes> 
-  
-  <Route path='/' element={<Home />}/>
-  <Route path='/signup' element={<Signup />} />
-  <Route path='dashboard' element={<Dashboard />} />
-  <Route  element={<PrivateRoute />} >  
-  <Route path='/productlist' element={<Productlist />} />
-  <Route path='/review' element={<Reviews  />} />
-  </Route>
+    <BrowserRouter>
+      <Header />
 
- </Routes>
- </div>
- <Footer />
-</BrowserRouter>
-      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/productlist" element={<Productlist />} />
+          <Route path="/review" element={<Reviews />} />
+        </Route>
+      </Routes>
 
+      <Footer />
+    </BrowserRouter>
   );
 };
 
-
-export default App
+export default App;

@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const ProductCard = ({name,description,price,image,rating,stock}) => {
+const ProductCard = ({name,description,price,image,rating,stock,_id}) => {
   
     return (
         <div className="col-sm-12 col-md-6 col-lg-3 my-3">
@@ -21,7 +22,7 @@ const ProductCard = ({name,description,price,image,rating,stock}) => {
              <a>Stock:{stock}</a>
             </div>
             <p className="card-text">${price}</p>
-            <a href="#" id="view_btn" className="btn btn-block">Add To Cart</a>
+            <Link  to={"/products/"+_id}  id="view_btn" className="btn btn-block">View  Details </Link>
           </div>
         </div>
       </div>
