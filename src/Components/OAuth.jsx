@@ -24,7 +24,7 @@ const OAuth = () => {
         body: JSON.stringify({
           name: result.user.displayName,
           email: result.user.email,
-          profilePic: result.user.photoURL,
+          profilePicture: result.user.photoURL,
         }),
       });
       const data = await res.json();

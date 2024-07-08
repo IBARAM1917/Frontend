@@ -9,7 +9,8 @@ import Home from "./Pages/Home";
 import Signup from "./Pages/Signup";
 import PrivateRoute from "./Components/PrivateRoute";
 import Dashboard from "./Pages/Dashboard";
-import ProductDetails from "./Pages/ProductDetails";
+import ProductDetails from "./Pages/productDetails";
+
 
 const App = () => {
   return (
