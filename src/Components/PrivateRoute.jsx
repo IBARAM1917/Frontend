@@ -6,7 +6,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 
 const PrivateRoute = () => {
     const {currentuser} =useSelector((state)=>state.user);
-    return currentuser ? <Outlet  /> :<Navigate to='/signin' />
+    return currentuser ? <Outlet  /> :<Navigate to='/' />
   
 };
 
