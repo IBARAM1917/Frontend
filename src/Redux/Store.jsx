@@ -3,8 +3,9 @@ import userReducer from "./Slice/userSlice";
 import themeReducer from "./Slice/themeSlice";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import cartReducer from './Slice/cartSlice';
 import productReducer from "./Slice/productSlice";
-import  cartReducer from "./Slice/cartSlice";
+
 
 const rootReducer = combineReducers({
   user: userReducer,
