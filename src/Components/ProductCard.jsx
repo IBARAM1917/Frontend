@@ -24,7 +24,7 @@ const ProductCard = ({name,description,price,image,rating,stock,_id}) => {
             </div>
             <p className="card-text">${price}</p>
 
-            <Button  to={"/cart/"+_id}  id="view_btn" className="btn btn-block  border-none">Add To Cart </Button>
+            <Button  to={"/cart"}  id="view_btn" className="btn btn-block  border-none">Add To Cart </Button>
           
           </div>
         </div>
