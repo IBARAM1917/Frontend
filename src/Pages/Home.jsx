@@ -24,7 +24,7 @@ const Home = () => {
     }
     try{
        dispatch(signInStart());
-    const response =await fetch('http://localhost:3000/api/auth/login-user',{
+    const response =await fetch(`${process.env.VITE_APP_API_URL}/api/auth/login-user`,{
         method:"POST",
         headers:{
             'Content-Type':'application/json'
