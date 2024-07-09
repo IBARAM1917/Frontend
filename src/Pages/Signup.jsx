@@ -23,7 +23,7 @@ const Signup = () => {
     try{
         setLoading(true);
         setErrorMessage(null)
-    const response =await fetch(`${process.env.VITE_APP_API_URL}/api/auth/register-user`,{
+    const response =await fetch('https://backend-1-1bsn.onrender.com/api/auth/register-user',{
         method:"POST",
         headers:{
             'Content-Type':'application/json'
