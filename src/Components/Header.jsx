@@ -63,6 +63,14 @@ const Header = () => {
           <FaSun />
          ) }
         </Button>
+        <Button className="rounded-2xl" gradientDuoTone="redToYellow">
+          <Link className="nav-link" to="/cart">
+            Cart
+            <span className="badge bg-white text-black ms-1 rounded-full">
+              0
+            </span>
+          </Link>
+          </Button>
         {currentuser ? (
           <Dropdown
             arrowIcon={false}

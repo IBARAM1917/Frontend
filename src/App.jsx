@@ -10,6 +10,7 @@ import Signup from "./Pages/Signup";
 import PrivateRoute from "./Components/PrivateRoute";
 import Dashboard from "./Pages/Dashboard";
 import ProductDetails from "./Pages/productDetails";
+import Cart from "./Pages/Cart";
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         <Route element={<PrivateRoute />}>
           <Route path="/productlist" element={<Productlist />} />
           <Route path="/review" element={<Reviews />} />
+          <Route path="/cart" element={<Cart /> } />
         </Route>
       </Routes>
 

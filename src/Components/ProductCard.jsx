@@ -1,3 +1,4 @@
+import { Button } from 'flowbite-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -22,7 +23,9 @@ const ProductCard = ({name,description,price,image,rating,stock,_id}) => {
              <a>Stock:{stock}</a>
             </div>
             <p className="card-text">${price}</p>
-            <Link  to={"/products/"+_id}  id="view_btn" className="btn btn-block">View  Details </Link>
+
+            <Button  to={"/cart/"+_id}  id="view_btn" className="btn btn-block  border-none">Add To Cart </Button>
+          
           </div>
         </div>
       </div>

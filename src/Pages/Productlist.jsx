@@ -1,12 +1,10 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import ProductCard from '../Components/ProductCard';
 import axios from 'axios';
-import { Button } from 'flowbite-react';
-import { useSelector } from 'react-redux';
 
-const productlist = ({children}) => {
+
+const productlist = () => {
   const [products,setProducts]= useState ([]);
-  const{theme} =useSelector((state)=> state.theme);
   useEffect(()=>{
  fetch();
   
@@ -31,6 +29,7 @@ const productlist = ({children}) => {
      {products.map(
        (e,index)=>{
         return <ProductCard  key={index} name={e.name} description={e.description} price={e.price} image={e.image} rating={e.rating} stock={e.stock} _id={e._id} />
+        
 
        }
      )}
