@@ -1,21 +1,22 @@
 import axios from 'axios';
 import { Button, Card } from 'flowbite-react';
 import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 
 const Cart = () => {
-    const [products,setProducts]= useState ([]);
-  useEffect(()=>{
- fetch();
-  
-  },[]);
+  const navigate =useNavigate();
+  const dispatch =useDispatch();
+  const cartItems =useSelector((state)=>state.cart.cartItems);
+  const {totalItems}=useSelector((state)=>state.cart);
+  const{total} =useSelector((state)=>state.cart);
+  const {currentuser}=useSelector((state)=>state.user);
+
+
   const apiurl=import.meta.env.VITE_APP_API_URL;
-  const  fetch =async()=>{
-   let res = await axios  .get(`${apiurl}/order`) 
-   // console.log(res.data);
-    setProducts(res.data.products)
   
-  }  ;
+  
     return (
         <div id="total_main_container">
         <Card>

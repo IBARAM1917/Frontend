@@ -9,7 +9,6 @@ import Home from "./Pages/Home";
 import Signup from "./Pages/Signup";
 import PrivateRoute from "./Components/PrivateRoute";
 import Dashboard from "./Pages/Dashboard";
-import ProductDetails from "./Pages/productDetails";
 import Cart from "./Pages/Cart";
 
 
@@ -22,7 +21,6 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="dashboard" element={<Dashboard />} />
-        <Route path="/products/:id" element={<ProductDetails />} />
         <Route element={<PrivateRoute />}>
           <Route path="/productlist" element={<Productlist />} />
           <Route path="/review" element={<Reviews />} />

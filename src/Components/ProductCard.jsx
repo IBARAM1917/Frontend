@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../Redux/Slice/cartSlice";
 import { toast } from "react-toastify";
-import axios from "axios";
 
+
+addToCart
 const ProductCard = ({
   name,
   description,
@@ -27,13 +28,14 @@ const ProductCard = ({
      image,
     description,
     price,
-    (qty) => {
+    quantity) => {
       const item = {
         _id: _id,
+        name:name,
         image:image,
         description: description,
         price: price,
-        qty: qty,
+        quantity:quantity,
       };
       if (totalItems > 0) {
         const isItemInCart = cartItems.find(
@@ -49,7 +51,7 @@ const ProductCard = ({
         item.qty = 1;
         dispatch(addToCart(item));
       }
-    });
+    };
 
   return (
     <div className="col-sm-12 col-md-6 col-lg-3 my-3">
@@ -69,7 +71,7 @@ const ProductCard = ({
                   <p className="card-text">${price}</p>
 
                   <Button
-                    id={'/cart'._id}
+                    id={product._id}
                     type="button"
                     onClick={() =>
                       AddtoCart(
