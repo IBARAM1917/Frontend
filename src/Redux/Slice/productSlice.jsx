@@ -14,7 +14,7 @@ const productSlice = createSlice({
   initialState,
   reducers: {
     displayProduct: (state, action) => {
-      state.courses = action.payload;
+      state.products = action.payload;
     },
     createProductStart: (state) => {
       state.loading = true;

@@ -1,5 +1,5 @@
 import { Avatar, Button, Dropdown, DropdownDivider, Navbar, TextInput } from "flowbite-react";
-import React from "react";
+import React, { useContext } from "react";
 import { useAccordionButton } from "react-bootstrap";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FaMoon, FaSun } from "react-icons/fa";
@@ -7,10 +7,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toggleTheme } from "../Redux/Slice/themeSlice";
 import { signOutSuccess } from "../Redux/Slice/userSlice";
+import { mycontext } from "../App";
  
 
 
 const Header = () => {
+  const [
+    items,
+    setitems,
+    cartcount,
+    setCartCount,
+    selectedproducts,
+    setSelectedProducts,
+  ] =useContext(mycontext);
   const path = useLocation().pathname;
   const dispatch=useDispatch();
   const navigate =useNavigate();
@@ -63,14 +72,14 @@ const Header = () => {
           <FaSun />
          ) }
         </Button>
-        <Button className="rounded-2xl" gradientDuoTone="redToYellow">
+        <Button   gradientDuoTone="redToYellow">
           <Link className="nav-link" to="/cart">
             Cart
             <span className="badge bg-white text-black ms-1 rounded-full">
-              0
+              {cartcount}
             </span>
           </Link>
-          </Button>
+        </Button>
         {currentuser ? (
           <Dropdown
             arrowIcon={false}
