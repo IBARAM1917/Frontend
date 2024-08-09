@@ -37,7 +37,7 @@ const Home = () => {
     }
     if(response.ok){
       dispatch(signInSuccess(data));
-        navigate('/productlist');
+        navigate('/dashboard');
     }
     }catch(error){
       dispatch(signInFailure((error.message)));
@@ -47,9 +47,9 @@ const Home = () => {
   return (
     <div className="container my-5">
       <div className="row align-items-center">
-        <div className="col-lg-7 text-center text-lg-start px-4 ">
+        <div className="col-lg-7 text-center text-lg-start px-5 py-6  image">
           <img
-            src="https://img.freepik.com/free-vector/jewellery-store-with-seller-customer_33099-1719.jpg"
+            src="https://assets.bizclikmedia.net/1800/3eb7889182dd47f70f445f0e16f3591a:e4b74fc371efa3cf6f5942192c548b8c/gettyimages-1259086543-0-jpg.webp"
             className="img-thumbnail "
             alt="Contact Us Illustration"
           />
@@ -74,7 +74,7 @@ const Home = () => {
                 onChange={handleChange}
               />
             </div>
-            <Button gradientDuoTone="redToYellow" type="submit" disabled={loading}>
+            <Button  type="submit" disabled={loading}>
             {loading ?(
                 <>
                   <Spinner color="warning" aria-label="Warning spinner example" size="sm" />

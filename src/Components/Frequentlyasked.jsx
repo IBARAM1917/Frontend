@@ -9,29 +9,26 @@ const Frequentlyaked = () => {
             <div className='max-w-5xl mx-10'>
                 <div className='p-4 bg-slate-400 rounded-lg'>
                     <Accordion
-                    title="Are pendants available with the chain?"
-                    answer="Yes. We have a range of chains for you. You need to select the preferred pendant and you can also find an option to check out the chains. The price that is mentioned near pendant is only for the pendant and the cost of chain is separate. Once you have selected the pendant, you need to click on BUY NOW option and later browse for gold or 22Kt Yellow chain."
+                    title="How are your home cleaning rates set?"
+                    answer="The cost of your cleaning services isn't something you want to leave to fate. Do they charge by the hour? By the project? Based on how many employees they send for the job? There are a lot of ways cleaning services can be priced and you need to know what you can expect to pay."
                     />
                        <Accordion
-                    title="Do you deal with Conflict Free diamonds?"
-                    answer="malabargoldanddiamonds.com uses only conflict-free diamonds that are acquired from legitimate diamond sources. These are certified through famous Kimberley Process Certification Scheme (KPCS)."
+                    title="What services are included?"
+                    answer="Once again, included services are as variable as your individual needs and will be priced accordingly. If you are booking a recurring Omaha home cleaning, you should know what is included in that time spent in your home."
                     />
                        <Accordion
-                    title="If I lose my jewellery certificate, can I get a duplicate one?"
-                    answer="For just a price of Rs.500, we can provide you with duplicate certificate. “Copy/ duplicate” will be written across such certificate."
+                    title="Are all cleaning equipment and supplies provided?"
+                    answer="Ask what is provided and what isn’t. Do they use your vacuum, or bring their own? What about cleaning solutions and rags?"
                     />
                        <Accordion
-                    title="Are there any differences in price of the products that are sold on this website and in other retail stores?"
-                    answer="Due to different regional price of gold, there may be differences in prices of the products sold."
+                    title="Do I have to be here when you clean?"
+                    answer="Most cleaning services do not require you to be home when they arrive, but they will need to know how you’d like them to gain entry into your home. As for Grace Home Cleaning of Omaha, we ask that you are present in your home or property during the cleaning."
                     />
                        <Accordion
-                    title="Is there an option of getting jewellery with different metal or gemstone that is not offered on malabargoldanddiamonds.com website?"
-                    answer="For this purpose, you need to call our customer care team and they will provide you with the choices."
+                    title="I have pets. What about them?"
+                    answer="At Grace Home Cleaning, we love your pets. But sometimes, they don’t love us. Fearful pets or those that might cause injury to cleaning crews are typically put into a specific area of the home for their safety and the safety of the cleaning professional during a visit. Always ask this question if you have pets in your home."
                     />
-                       <Accordion
-                    title="What if I do not find the piece that I wanted on the site anymore?. Can I still place an order?"
-                    answer="Sometimes we do not have certain pieces in our stock. Or,  it might have been relocate it to any other page. But if you really need the desired product, we will always try our best to help you get the same. For this, you need to get in touch with the customer care team on +91 22 62300916."
-                    />
+                      
 
                 </div>
             </div>

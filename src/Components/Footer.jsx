@@ -4,15 +4,15 @@ import { BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
 
 const FooterCom = () => {
     return (
-      <Footer  container className="border border-t-8   dark:bg-black dark:text-white">
-      <div className="w-full">
-        <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-          <div>
+      <Footer  container className="border border-t-8">
+      <div className="w-full px-9 py-5">
+        <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-3">
+          <div className='px-5'>
             <Footer.Brand
               href="#"
-              src="https://media.licdn.com/dms/image/C560BAQEiAgBIBMm_WA/company-logo_200_200/0/1631322401034?e=2147483647&v=beta&t=CnxTz60a4rd3VBMeeKT0RWmrn5hk9ku1q3LnODrMY9Y"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXEpOGl9WzSH-zmcAVqUx8lp-DZUzJLDmFMg&s"
               alt="Logo"
-              name="IBA Gold Shop"
+              name="IBA Service"
             />
           </div>
           <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
