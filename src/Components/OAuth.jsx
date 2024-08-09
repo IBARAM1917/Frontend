@@ -30,7 +30,7 @@ const OAuth = () => {
       const data = await res.json();
       if (res.ok) {
         dispatch(signInSuccess(data));
-        navigate("/productlist");
+        navigate("/dashboard");
       }
     } catch (error) {
       dispatch(signInSuccess(error.message));
