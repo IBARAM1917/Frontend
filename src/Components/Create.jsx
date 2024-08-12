@@ -7,7 +7,7 @@ import { UserContex } from '../Context/Useercontext';
 
 axios.defaults.baseURL ="https://backend-1-1bsn.onrender.com/api/auth"
 const Create = () => {
-    const{addSection,setAddSection} = useContext(UserContex);
+    const{addSection,addUser} = useContext(UserContex);
     const [Section,setSection]=useState(false);
     const [formData,setFormData]=useState({
         Title:"",
@@ -42,9 +42,9 @@ const Create = () => {
          <div className='backWrapper'>
             <div className='loginWrapper border rounded shadow-sm p-4'>
                 <h2 className='text-center mb-4'>Create Service Request</h2>
-                <Button onClick={()=>setAddSection(true)}>Add</Button>
+                <Button onClick={()=>setSection(true)}>Add</Button>
                 {
-                 addSection &&(
+                 Section &&(
                 
               <Form  onSubmit={handleSubmit}>
               <Form.Group className='mb-3' controlId='formName'>

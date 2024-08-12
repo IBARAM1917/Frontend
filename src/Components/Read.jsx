@@ -2,7 +2,7 @@ import { Spin } from 'antd';
 import { data } from 'autoprefixer';
 import axios from 'axios';
 import { Table } from 'flowbite-react';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { useParams } from 'react-router-dom';
 
