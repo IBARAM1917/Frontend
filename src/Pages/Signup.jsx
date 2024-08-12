@@ -35,7 +35,7 @@ const Signup = () => {
         return setErrorMessage(data.message)
     }
     if(response.ok){
-        navigate('/dashboard');
+        navigate('/');
     }
     }catch(error){
       setErrorMessage(error.message)

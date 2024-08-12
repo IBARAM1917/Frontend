@@ -1,12 +1,14 @@
 
 import axios from 'axios';
 import { Button } from 'flowbite-react';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Form } from 'react-bootstrap';
+import { UserContex } from '../Context/Useercontext';
 
 axios.defaults.baseURL ="https://backend-1-1bsn.onrender.com/api/auth"
 const Create = () => {
-    const [addSection,setAddSection]=useState(false);
+    const{addSection,setAddSection} = useContext(UserContex);
+    const [Section,setSection]=useState(false);
     const [formData,setFormData]=useState({
         Title:"",
         name:"",
@@ -30,7 +32,7 @@ const Create = () => {
         const  data = await axios.post("/create",formData)
         console.log(data);
         if(data.data.success){
-            setAddSection(false)
+            setSection(false)
             alert(data.data.message)
         }
     }

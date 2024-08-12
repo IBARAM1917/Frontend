@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import React, { useEffect, useState } from 'react';
 import { Button, Table } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 axios.defaults.baseURL ="https://backend-1-1bsn.onrender.com/api/auth"
 const AdminDashboard = () => {
@@ -20,7 +21,7 @@ const AdminDashboard = () => {
        id:"",
     })
     const [dataList,setDataList]=useState([])
-    
+   const navigate =useNavigate();
     
     const  getFetchData =async ()=>{
         const  data = await axios.get("/data")
@@ -39,6 +40,11 @@ const handleupdate =async()=>{
         setDataList(data.data.data)
     }
 
+}
+const hanleViewButtonClick =(id) =>{
+    console.log("View button clicked width id:",id);
+    navigate(`/data/${id}`);
+    
 }
     return (
         <div className='tableContainer'>
@@ -66,7 +72,7 @@ const handleupdate =async()=>{
                     <td>{el.email}</td>
                     <td>{el.status}</td>
                     <td>{el.createdAt}</td>
-                    <td><Button className="btn-view" variant="primary" onClick={()=>handleupdate(el._id)}>
+                    <td><Button className="btn-view" variant="primary" onClick={()=>hanleViewButtonClick(el._id)}>
                         View
                         </Button></td>
                     </tr>

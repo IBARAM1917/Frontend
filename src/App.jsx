@@ -9,6 +9,9 @@ import Dashboard from "./Pages/Dashboard";
 import AdminDashboard from "./Components/AdminDashboard";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import Read from "./Components/Read";
+import Create from "./Components/Create";
+import { UserProvider } from "./Provider/UserProvider";
  
 
 const App = () => {
@@ -17,12 +20,14 @@ const App = () => {
 
   return (
     <BrowserRouter>
-   
+   <UserProvider> 
      <Header />
       <Routes>  
        <Route element={<PrivateRoute />} >
        <Route path="/dashboard" element={<Dashboard />} />
      <Route path="/admindashboard" element={<AdminDashboard />} />
+     <Route path="/data/:id" element={<Read />} />
+     <Route path="/create" element={<Create />} />
      </Route>
      </Routes>
    
@@ -37,6 +42,7 @@ const App = () => {
           </Route>
       </Routes>
       <Footer />
+      </UserProvider>
     </BrowserRouter>
   );
 };
